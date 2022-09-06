@@ -12,7 +12,8 @@
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   },
   "dependencies": {
     "gatsby": "^4.21.1",
@@ -22,6 +23,7 @@
     "sass": "^1.54.8"
   },
   "devDependencies": {
-    "@iconify/react": "^3.2.2"
+    "@iconify/react": "^3.2.2",
+    "gh-pages": "^4.0.0"
   }
 }
