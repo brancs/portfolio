@@ -1,0 +1,14 @@
+@import "../../../styles/styles.scss";
+
+.custom-footer {
+    padding: 2rem 0;
+    background: $dark;
+    text-align: center;
+    font-size: 0.875rem;
+    line-height: 0.875rem;
+    color: $light;
+
+    @media screen and (max-width: 768px) {
+        padding-bottom: calc(2rem + 80px);
+    }
+}

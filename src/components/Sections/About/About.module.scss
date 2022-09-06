@@ -1,0 +1,28 @@
+.about {
+    display: grid;
+    align-items: center;
+
+    .content-wrapper {
+        display: grid;
+        grid-template-areas: 'description img';
+        gap: 2rem;
+        align-items: center;
+    
+        .profile-image {
+            height: 315px;
+            width: auto;
+        }
+    
+        .description {
+            grid-area: description;
+        }
+    
+        .image {
+            grid-area: img;
+        }
+        
+        @media screen and (max-width: 768px) {
+            grid-template-areas: 'description' 'img';
+        }
+    }
+}

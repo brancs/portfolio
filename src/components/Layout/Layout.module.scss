@@ -1,0 +1,47 @@
+@import "../../styles/styles.scss";
+
+body {
+    background: $light;
+    overflow-x: hidden;
+}
+
+.container {
+    padding: 0 240px;
+
+    @media screen and (max-width: 480px) {
+        padding: 0 16px;
+    }
+
+    @media screen and (min-width: 481px) and (max-width: 768px) {
+        padding: 0 32px;
+    }
+
+    @media screen and (min-width: 769px) and (max-width: 1024px) {
+        padding: 0 64px;
+    }
+
+    @media screen and (min-width: 1025px) and (max-width: 1200px) {
+        padding: 0 128px;
+    }
+
+    @media screen and (min-width: 1201px) and (max-width: 1440px) {
+        padding: 0 240px;
+    }
+
+    @media screen and (min-width: 1441px) {
+        padding: 0 360px;
+    }
+}
+
+.section-spacer {
+    margin-bottom: 200px;
+}
+
+.section-size {
+    min-height: 100vh;    
+    padding: 200px 0;
+}
+
+.img-fluid {
+    width: 100%;
+}

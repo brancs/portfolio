@@ -1,0 +1,53 @@
+@import "../../styles/styles.scss";
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .5rem;
+    margin-right: 2rem;
+    font-size: 1rem;
+    line-height: 1rem;
+    text-decoration: none;
+    border-radius: .25rem;
+    
+    &, .icon {
+        transition-property: background-color, color;
+        transition-duration: .25s, .25s;
+        transition-timing-function: ease-in-out, ease-in-out;
+    }
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+
+    &.outlined {
+        border: 1px solid $dark;
+
+        &:hover {
+            background-color: $dark;
+            color: $light;
+        }
+    }
+    
+    .icon {
+        font-size: 2rem;
+        line-height: 2rem;
+        color: $dark;
+    }
+
+    &:hover .icon {
+        color: $light;
+    }
+
+    &.btn-primary {
+        background-color: $light;
+        color: $dark;
+        border-color: $dark;
+    }
+
+    @media screen and (max-width: 520px) {
+        margin-bottom: 1rem;
+    }
+}

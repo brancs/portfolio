@@ -1,0 +1,58 @@
+@import "../../../styles/styles.scss";
+
+.projects {
+    background: $dark;
+    color: $light;
+
+    .content-wrapper {
+        height: 100%;
+    
+        h2 {text-align: center;}
+
+        .projects-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            justify-content: center;
+            margin-top: 3rem;
+
+            @media screen and (max-width: 480px) {
+                grid-template-columns: 1fr;
+            }
+        
+            @media screen and (min-width: 481px) and (max-width: 768px) {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .projects-empty {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 3rem;
+
+            .ind-line {
+                position: relative;
+
+                .detail {
+                    width: 100vw;
+                    transform: translateX(-100%);
+                    animation-name: front;
+                    animation-duration: 10s;
+                    animation-iteration-count: infinite;
+                    animation-timing-function: linear;
+                }
+
+                @keyframes front {
+                    0% {
+                        transform: translateX(-100%);
+                    }
+                    100% {
+                        transform: translateX(100%);
+                    }
+                }
+            }
+        }
+    }
+}
